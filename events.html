@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" oncontextmenu="return doPrevent()">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    
+    function doGreet(uname)
+    {
+        alert("Welcome "+uname);
+
+        return false;
+    }
+
+   function doPrevent()
+    {
+        alert("You cant perform this");
+
+        return false;
+    }
+    
+    </script>
+</head>
+<body onload="alert('welcome all')">
+
+    <form name="reg" onsubmit="return doGreet('gopi')" action="math.html" method="POST" enctype="multipart/form-data">
+    OnBlur : <input type="text" name="uname" onblur="doGreet(this.value)"> <br><br>
+
+    OnChange : <input type="text" name="uemail" value="bala" onchange="doGreet(this.value)"> <br><br>
+
+    OnFocus : <input type="text" name="uemail" value="bala" onfocus="doGreet(this.value)"> <br><br>
+
+    OnSelect : <textarea name="add" id="add" cols="30" rows="10" onselect="doGreet(this.value)">Chennai</textarea> <br><br>
+
+    OnKeypress : <input type="text" name="uemail"  onkeypress="doGreet(this.value)"> <br><br>
+
+    OnKeydown : <input type="text" name="uemail"  onkeydown="doGreet(this.value)"> <br><br>
+
+    OnKeyup : <input type="text" name="uemail"  onkeyup="doGreet(this.value)"> <br><br>
+
+    OnCopy : <input type="text" name="uemail"  oncopy="return doPrevent()"> <br><br>
+
+
+
+
+
+
+
+    <input type="submit" value="Register">
+
+
+    </form>
+
+
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    
+    function doCalc(op)
+    {
+       alert(op);
+
+        var num1 = document.getElementById("ip1").value;
+        var num2 = document.getElementById("ip2").value;
+
+       // alert(isNaN(num1));
+
+        var result;
+
+        var span = document.getElementById("res");
+
+        if(isNaN(num1) || isNaN(num2))
+        {
+            result = "Please Enter Valid Inputs";
+            span.style.color = "red";
+        }
+        else {
+
+            if(op=='Add')
+            {
+                result = Number(num1)+Number(num2);
+            }
+            else if(op=='Sub')
+            {
+                result = num1-num2;
+            }
+            
+        }
+
+         
+
+       // alert(result);
+
+       span.innerHTML = result;
+
+
+
+    }
+    
+    </script>
+</head>
+<body>
+    
+    Number 1 : <input type="text" id="ip1"> <br><br>
+    Number 2 : <input type="text" id="ip2"> <br><br>
+
+    <input type="button" value="Add" onclick="doCalc(this.value)"> &nbsp;
+    <input type="button" value="Sub" onclick="doCalc(this.value)"> &nbsp;
+    <input type="button" value="Mul" onclick="doCalc(this.value)"> &nbsp;
+    <input type="button" value="Div" onclick="doCalc(this.value)"> &nbsp; <br><br>
+
+    Result : <span id="res"></span>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    
+    var person = {fname:"gopi", lname:"kris", age:56, fullname : function(){
+
+        return person.fname+" "+person.lname;
+    }};
+
+   // var age = "age";
+
+    person.place = "Chennai";
+
+    alert(person.fullname());
+
+    //delete person.age;
+
+    person.fullDetails = function(){
+
+        //return person.fullname()+", "+person.place;
+
+        return `${person.fullname()}, ${person.place}`;
+    }
+
+    alert(person.fullDetails());
+
+
+
+    console.log(person);
+
+    //console.log(person.name);
+
+   // console.log(person[age]);
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

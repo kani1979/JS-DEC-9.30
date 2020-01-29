@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+<body>
+    
+   <div id="result"></div>
+
+</body>
+
+<script>
+
+  function doEdit(index)
+  {
+    alert(index);
+  }
+    
+    var menus = ["Home", "About", "Contact", "Services"];
+
+    var res = "<ul>";
+
+    for(var i=0; i<menus.length; i++)
+    {
+      res +=  "<li>"+menus[i]+"<input type='button' value='Edit' onclick='doEdit("+i+")'></li>"; // a += b ==> a = a+b'
+    }
+
+   res += "</ul>";
+
+   document.getElementById("result").innerHTML = res;
+
+    
+    </script>
+</html>

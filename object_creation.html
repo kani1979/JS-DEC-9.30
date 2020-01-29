@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        var obj1 = { name: "gopi" }; //literal
+
+        var obj2 = new Object(); // new keyword {}
+
+        obj2.name = "bala"; obj2.age = 56;
+
+        function Student(name, stdClass, total) {
+            this.stdName = name;
+            this.stdClass = stdClass;
+            this.stdTotal = total;
+
+            this.stdSchool = "ICI";
+
+            this.stdDetails = function () {
+                return `${this.stdName} ${this.stdClass}, ${this.stdTotal}`;
+            }
+
+        }
+
+        Student.prototype.schoolAddress = "Chennai";
+
+
+        var std1 = new Student("Gopi", "10th", 455);
+        std1.stdName = "Gopikrishna";
+        std1.age = 25;
+        var std2 = new Student("Arun", "12th", 1055);
+
+        console.log(std1, std2);
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

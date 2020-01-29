@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+   
+</head>
+<body>
+
+    Search : <input type="text" onkeyup="doSearch(this.value)"> <br><br>
+    <div id="res">
+
+    </div>
+</body>
+
+<script>
+    
+    var menus = ["Home", "About", "Contact", "Services"];
+
+    function doSearch()
+    {
+        var tempArr = [];
+
+        for(var i=0; i<menus.length; i++)
+        {
+            if(menus[i].toLowerCase().includes(searchVal.toLowerCase()))
+            {
+                tempArr.push(menus[i]);
+            }
+
+        }
+
+        display();
+    }
+
+    function display(arr)
+    {
+        var result = "<ul>";
+        for(var i=0; i < arr.length; i++)
+        {
+            result += `<li>${arr[i]}</li>`;
+
+        }
+
+        result += "</ul>"
+
+        document.getElementById("res").innerHTML = result;
+    }
+
+    display(menus);
+
+    </script>
+</html>

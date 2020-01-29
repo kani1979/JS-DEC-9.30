@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    
+    var str = "hi gopi h r u Gopi?";
+
+    var arr;
+
+    arr = str.match(/go/gi);
+
+    var useremail = "gopi@gmail.com";
+
+    arr = !!useremail.match(/^([a-zA-Z0-9_\-\.\$]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/);
+
+    if(arr)
+    {
+        alert("Valid email");
+    }
+    else {
+        alert("Invalid email");
+    }
+
+   // alert(useremail.repeat(10));
+
+   var arr2 = ["hi", "hello", "welcome"];
+
+   var str2 = arr2.toString();
+
+  // alert(str2[0]);
+
+  //alert(str.split(""));
+
+  //alert(str.toUpperCase());
+
+  var str3 = "     hello       all     ";
+
+  alert(str3.trim());
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

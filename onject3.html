@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+
+        var persons = [{
+            fname: "gopi", lname: "kris", age: 56
+        }, {
+            fname: "bala", lname: "kumar", age: 89
+        }, {
+            fname: "arun", lname: "kartik", age: 45
+        }];
+
+        var newPersons = [...persons];
+
+        persons[0].fname = "Ram";
+
+        console.log(persons);
+
+        console.log(newPersons);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

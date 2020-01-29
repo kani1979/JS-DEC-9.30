@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    
+    function doCalc(op)
+    {
+        var num1 = document.getElementById("ip1").value;
+        var num2 = document.getElementById("ip2").value;
+
+        var result;
+
+        switch(op)
+        {
+            case "+": 
+
+            result = Number(num1)+Number(num2);
+           break;
+
+            default: 
+            result = "Somtheing went wrong";
+            break;
+
+            case "-": 
+
+            result = num1-num2;
+            break;
+
+
+           
+
+
+        }
+
+        document.getElementById("res").innerHTML = result;
+
+    }
+
+    </script>
+</head>
+<body>
+    Number 1 : <input type="text" id="ip1"> <br><br>
+    Number 1 : <input type="text" id="ip2"> <br><br>
+
+    <input type="button" value="+" onclick="doCalc(this.value)">&nbsp;
+    <input type="button" value="-" onclick="doCalc(this.value)">&nbsp;
+    <input type="button" value="*" onclick="doCalc(this.value)">&nbsp;
+    <input type="button" value="/" onclick="doCalc(this.value)">&nbsp; <Br></Br>
+
+    Result : <span id="res"></span>
+
+</body>
+</html>
